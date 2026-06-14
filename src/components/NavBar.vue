@@ -24,8 +24,8 @@
       <!-- Separador + CV -->
       <li>
         <a
-          href="/Jorge_Caballero_CV.pdf.pdf"
-          download="Jorge_Caballero_CV.pdf.pdf"
+          href="/Jorge_Caballero_CV.pdf"
+          download="Jorge_Caballero_CV"
           class="inline-flex items-center gap-1.5 text-[.75rem] tracking-[.09em] uppercase text-muted no-underline transition-colors hover:text-green border-l border-white/10 pl-8"
         >
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -71,8 +71,8 @@
         @click="mobileOpen = false"
       >{{ link.label }}</a>
       <a
-        href="/Jorge_Caballero_CV.pdf.pdf"
-        download="Jorge_Caballero_CV.pdf.pdf"
+        href="/Jorge_Caballero_CV.pdf"
+        download="Jorge_Caballero_CV"
         class="flex items-center gap-2.5 font-display font-bold text-[clamp(1.8rem,6vw,2.4rem)] text-green no-underline"
         @click="mobileOpen = false"
       >

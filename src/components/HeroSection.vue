@@ -63,7 +63,7 @@
         <!-- Descargar CV -->
         <a
           href="/Jorge_Caballero_CV.pdf"
-          download="Jorge_Caballero_CV.pdf"
+          download="Jorge_Caballero_CV"
           class="inline-flex items-center gap-2 bg-transparent text-muted font-display font-medium text-[.83rem] px-[22px] py-3 rounded-lg border border-white/10 no-underline transition-all hover:text-green hover:border-green/30"
         >
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
