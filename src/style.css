@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --green-glow: rgba(0, 229, 160, 0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-bg text-txt font-body overflow-x-hidden;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5 { @apply font-display; }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 font-mono text-[.68rem] font-medium tracking-[.1em] text-green mb-4;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply block w-6 h-px bg-green;
+  }
+}
+
+  /* Barra de progreso de scroll */
+  #progress-bar {
+    @apply fixed top-0 left-0 h-0.5 z-[200] bg-green;
+    box-shadow: 0 0 8px var(--green-glow);
+    transition: width 0.1s linear;
+  }
+
+  /* Glow en texto */
+  .text-glow { text-shadow: 0 0 20px rgba(0, 229, 160, 0.4); }
+
+  /* Dot pulsante del hero tag */
+  .dot-pulse {
+    @apply w-1.5 h-1.5 rounded-full bg-green;
+    box-shadow: 0 0 6px theme('colors.green');
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  /* Scroll cue line */
+  .scroll-line {
+    @apply w-px h-10;
+    background: linear-gradient(to bottom, theme('colors.green'), transparent);
+    animation: drip 2.2s ease-in-out infinite;
+  }
+  @keyframes drip {
+    0%,  100% { transform: scaleY(0); transform-origin: top;    opacity: 0; }
+    35%        { transform: scaleY(1); transform-origin: top;    opacity: 1; }
+    65%        { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+    100%       { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Skill bar fill */
+  .sk-fill {
+    @apply h-full rounded-sm bg-green;
+    background: linear-gradient(90deg, theme('colors.green'), #00ffbd);
+    box-shadow: 0 0 8px rgba(0, 229, 160, 0.35);
+    width: 0%;
+    transition: width 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Timeline dot */
+  .tl-dot {
+    @apply absolute rounded-full bg-bg border border-muted;
+    left: calc(-1.75rem - 4px);
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    transition: border-color 0.4s, box-shadow 0.4s;
+  }
+  .tl-dot.active {
+    border-color: theme('colors.green');
+    box-shadow: 0 0 0 4px rgba(0, 229, 160, 0.1);
+  }
+
+  /* Grid hero background */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
