@@ -25,7 +25,7 @@
 
 <script setup>
 // ── Datos — edítalos aquí ──
-const about = 'Soy una persona ágil y resolutiva, con ambición y ganas de seguir aprendiendo, capaz de trabajar en perfecta sintonía con diversos grupos de trabajo. Tambien tengo experiencia en gestión de equipos de desarollo, buscando siempre la forma para que todos mis companeros den lo maximo de si mismos y que todos rememos hacia el mismo objetivo'
+const about = 'Soy una persona ágil y resolutiva, con ambición y ganas de seguir aprendiendo, capaz de trabajar en perfecta sintonía con diversos grupos de trabajo. Tambien tengo experiencia en gestión de equipos de desarollo, buscando siempre la forma para que todos mis compañeros den lo maximo de si mismos y que todos rememos hacia el mismo objetivo'
 const stats = [
   { value: '25',  suffix: '', label: 'Años' },
   { value: '5',  suffix: '+', label: 'Años de experiencia' },
